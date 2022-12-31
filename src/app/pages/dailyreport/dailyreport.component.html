@@ -1,0 +1,51 @@
+<div class="container text-center">
+  <div class="row">
+    <!-- {{this.dateForm.value|json}} -->
+    <div class="col-4">
+
+      <form [formGroup]="dateForm">
+        <div style="float:left;">
+          <label for="fromtime">FromTime : </label>
+          <input type="datetime-local" formControlName="fromtime"><br>
+          <label for="totime">Totime : </label>
+          <input type="datetime-local" formControlName="totime"> <br>
+          <input type="date">
+          <button class="btn btn-primary" (click)="go()">Get Data</button>
+  
+        </div>
+      </form>
+
+       </div>
+    <div class="col-4">
+      <button type="button" class="btn btn-primary" style="width: 100%;">Get Data</button>
+    </div>
+    <div class="col-4">
+      <button type="button" class="btn btn-primary" style="width: 100%;">Export</button>
+    </div>
+  </div><br>
+
+  <div class="card">
+
+    <table class="table caption-top">
+      <thead>
+        <tr>
+          <th scope="col">From(time)</th>
+          <th scope="col">To(time)</th>
+          <th scope="col">Calculated water consumption (litres)</th>
+          <th scope="col">Total water consumption (litres)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let report of r;let i = index">
+          <td>{{this.dateForm.value.fromtime}}</td>
+          <td>{{this.dateForm.value.totime}}</td> 
+          <!-- <td>{{report.time}}</td> -->
+          <td>{{report.Lpm}}</td>
+          <td>{{report.totalizer}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>

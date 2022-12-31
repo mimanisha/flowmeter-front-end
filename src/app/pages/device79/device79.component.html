@@ -1,0 +1,47 @@
+<div class="container" style="margin-top: 0px;padding: 20px 20px;">
+    <h5><i class="fa fa-bolt"></i>79(Vidani)</h5>
+    <div class="card" style="margin-top: 20px">
+        <div class="list">
+            <ul class="li" style="display: flex; list-style:none; ">
+                <li style=" padding-bottom: -10px; padding-top: 10px; padding-right: 15px;"><button type="button"
+                        class="btn btn-block bg-gradient-primary"><i class="fa fa-toggle-on"></i> Panel</button></li>
+                <li style="padding-bottom: -10px; padding-top: 15px; padding-right: 15px;" [routerLink]="['/report']"><i
+                        class="fa fa-list-ul"> </i> Reports</li>
+                <li style="padding-bottom: -10px; padding-top: 15px; padding-right: 15px;"><i class="fa fa-wrench"></i>
+                    Config</li>
+            </ul>
+            <hr>
+        </div>
+        
+        <div class="row">
+
+            <div class="col-6-md" style="margin-right: 30px;margin-left: 20px;">
+                <div class="alert alert-warning alert-dismissible ng-star-inserted">
+                    <button _ngcontent-bay-c8="" aria-hidden="true" class="close" data-dismiss="alert"
+                        type="button"></button>
+                    <h5 _ngcontent-bay-c8=""><i _ngcontent-bay-c8="" class="icon fa fa-clock-o"></i>
+                        Waiting for response from device...</h5>
+                </div>
+                <div class="card" style="border-top: 3px solid blue;">
+                    <div class="row">
+                        <div class="col-6-md" style="margin-right: 30px; padding-left: 10px; margin-top: 40px; ">
+
+                            <app-guage></app-guage>
+                        </div>
+                        <div class="col-6-md"> <br><br><br>
+                            <h4 style="padding: 5px;">Total water consumption</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-6-md">
+                <div class="card">
+                    <app-map></app-map>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>    

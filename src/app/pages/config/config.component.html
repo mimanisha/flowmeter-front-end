@@ -1,0 +1,73 @@
+<p>config works!</p>
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+
+<div class="content-wrapper">
+    <div class="container" style="margin-top: 50px;">
+        <p><i class="fa fa-bolt" style="margin-top: 20px;"></i>79(Vidani)</p>
+        <div class="card">
+            <div class="list">
+                <ul class="li" style="display: flex; list-style:none; ">
+                    <li style=" padding: 20; padding-top: 20px; padding-right: 20px;" [routerLink]="['/mainpage','79']">
+                        <i class="fa fa-toggle-on"></i> Panel</li>
+                    <li style="padding: 20; padding-top: 20px; padding-right: 20px;" [routerLink]="['/report']"><i
+                            class="fa fa-list-ul"></i> Reports</li>
+                    <li style="padding: 20; padding-top: 20px; padding-right: 20px;"><button type="button"
+                            class="btn btn-block bg-gradient-primary"><i class="fa fa-wrench"></i> Config</button></li>
+                </ul>
+                <hr>
+            </div>
+
+            <div class="card-body">
+               
+                <div class="card">
+                  <p>
+                    <button class="btn btn" type="button" data-bs-toggle="collapse" data-bs-target="#monthly" aria-expanded="false" aria-controls="collapseExample">
+                      Edit Device
+                    </button>
+                  </p>
+                  <div class="collapse" id="monthly">
+                    <div class=" card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                            <h6>Select Location (by dragging Lamp Icon on map):</h6>
+                            <app-map  ></app-map>
+                            <label for="exampleFormControlInput1" class="form-label">Latitude</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1">
+                            <label for="exampleFormControlInput1" class="form-label">Longitude</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1">
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <h6>Service Expire</h6>
+                            May 23,2023 <br>
+                            <br>
+                            <!-- <div class="mb-3"> -->
+                                <label for="exampleFormControlInput1" class="form-label">Device Name</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"> <br>
+                                <label for="exampleFormControlInput1" class="form-label">Area</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"><br>
+                                <label for="exampleFormControlInput1" class="form-label">Type</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"><br>
+                                <label for="exampleFormControlInput1" class="form-label">Flow Multiplier</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1"> <br>
+                                <!-- <button class="btn btn-primary">Update</button> -->
+                              <!-- </div>ss -->
+                            
+                            <button class="btn btn-primary"> Update</button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+        </div>
+
+    </div>
+</div>
+
+<app-footer></app-footer>
